@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDB Movie Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 OMDB Movie Explorer</h1>
+            <p class="subtitle">Discover your favorite movies and series</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for movies, series, episodes..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn">Search</button>
+            </div>
+            <div id="errorMsg" class="error-message"></div>
+        </div>
+
+        <div class="favorites-toggle">
+            <button id="showFavoritesBtn" class="secondary-btn">Show Favorites (<span id="favCount">0</span>)</button>
+        </div>
+
+        <div id="loadingSpinner" class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <div id="resultsContainer" class="results-container"></div>
+
+        <div id="paginationContainer" class="pagination"></div>
+    </div>
+
+    <!-- Movie Detail Modal -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="movieDetailContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
